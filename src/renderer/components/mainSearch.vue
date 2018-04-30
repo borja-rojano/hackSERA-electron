@@ -1,5 +1,39 @@
 <template>
-<h1>Search</h1>
+  <div class="columns">
+
+
+    <div class="column is-8 is-offset-2">
+      <section class="hero is-medium is-info is-medium">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title is-large has-text-weight-bold">
+              hackSERA
+            </h1>
+            <h2 class="subtitle is-large has-text-weight-bold">
+              An open-source search tool made by examiners, for examiners.
+            </h2>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="box">
+        <div class="field">
+          <label class="label">Enter Query</label>
+          <div class="control">
+            <form ref='form' v-on:submit.prevent="submitQuery">
+              <input class="input"
+              type="text"
+              placeholder="Enter a PQL query, or open a dossier with ..open <Application Number>"
+              v-model.trim='newQuery'
+              >
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </div>
 <!-- Welcome Jumbortron -->
 
     <!-- <div class="jumbotron jumbotron-fluid" >
@@ -73,7 +107,14 @@ export default {
 
 <style scoped>
 
+.columns {
+  padding-top: 20px;
+}
 
+.has-bg-img {
+  background: url('~@/assets/cover.jpg')center center;
+  background-size:cover;
+}
 
 
 input {
