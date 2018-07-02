@@ -12,6 +12,7 @@
 
 <style scoped>
 #app{
-  height: 100%;
+position: relative;
+bottom: 0
 }
 </style>
